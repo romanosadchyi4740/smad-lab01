@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics Calculator</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Дискретні статистичні ряди</h1>
+
+<table id="tbl" border="1">
+  <tr id="mainRow">
+    <th>X</th>
+    <td>0.38</td>
+    <td>0.37</td>
+    <td>0.38</td>
+    <td>0.36</td>
+    <td>0.40</td>
+    <td>0.36</td>
+    <td>0.48</td>
+    <td>0.32</td>
+  </tr>
+</table>
+
+<div class="controls">
+  <button onclick="appendColumn()">Додати колонку</button>
+  <button onclick="deleteColumn()">Видалити колонку</button>
+  <button onclick="buttonSolve()">Вирішити</button>
+</div>
+
+<h2>Результати</h2>
+<div class="results">
+  <p><strong>Середнє статистичне: </strong><span id="avgstat"></span></p>
+  <p><strong>Мода: </strong><span id="mode"></span></p>
+  <p><strong>Медіана: </strong><span id="median"></span></p>
+  <p><strong>Розмах: </strong><span id="range"></span></p>
+  <p><strong>Дисперсія: </strong><span id="dispersion"></span></p>
+  <p><strong>Середнє квадратичне відхилення: </strong><span id="serKvadr"></span></p>
+  <p><strong>Виправлена дисперсія: </strong><span id="vyprDyspr"></span></p>
+  <p><strong>Виправлене середнє квадратичне відхилення: </strong><span id="vyprSer"></span></p>
+  <p><strong>Варіація: </strong><span id="variation"></span></p>
+  <p><strong>Початковий момент </strong><input type="number" id="pmo" placeholder="Enter order"><strong>-го порядку: </strong><span id="pm"></span></p>
+  <p><strong>Центральний момент </strong><input type="number" id="cmo" placeholder="Enter order"><strong>-го порядку: </strong><span id="cm"></span></p>
+  <p><strong>Асиметрія: </strong><span id="assym"></span></p>
+  <p><strong>Ексцес: </strong><span id="exc"></span></p>
+</div>
+
+<h2>Графіки</h2>
+<div class="charts">
+  <div id="chart_div"></div>
+  <div id="chart_div2"></div>
+  <div id="chart_div4"></div>
+  <div id="chart_div5"></div>
+  <div id="chart_div3"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
